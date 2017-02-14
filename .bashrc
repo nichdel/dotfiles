@@ -6,9 +6,14 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
+
 PS1='[\u@\h \W]\$ '
 
-alias pacday='sudo pacman -Syu'
+# TODO: add archnews rss
+alias pacup='pacaur -Syu'
 
-alias pacmonth='sudo cp -v /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.old; sudo reflector --verbose --latest 20 --sort rate --save /etc/pacman.d/mirrorlist; sudo pacman -Syyu'
+# Nice top replacement
+alias top='htop'
 
+# Show a fortune every time a terminal is opened
+fortune
